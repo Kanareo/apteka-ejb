@@ -106,4 +106,14 @@ public class Order implements Serializable {
 		this.user = user;
 	}
 
+	@Override
+	public String toString() {
+		return "Order [" + (idOrder != null ? "idOrder=" + idOrder + ", " : "")
+				+ (deliveryDate != null ? "deliveryDate=" + deliveryDate + ", " : "")
+				+ (orderDate != null ? "orderDate=" + orderDate + ", " : "")
+				+ (orderStatus != null ? "orderStatus=" + orderStatus + ", " : "")
+				+ (orderItems != null ? "orderItems=" + orderItems + ", " : "") + (user != null ? "user=" + user : "")
+				+ "]";
+	}
+
 }

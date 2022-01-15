@@ -44,4 +44,19 @@ public class OrderItemDAO {
 
         return list;
     }
+    
+    public List<OrderItem> getOrderItemsByID(Integer id){
+    	List<OrderItem> list = null;
+    	
+    	Query query = em.createQuery("SELECT o FROM OrderItem o where o.order.idOrder=:id");
+    	query.setParameter("id", id);
+
+        try {
+            list = query.getResultList();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    	
+    	return list;
+    }
 }
