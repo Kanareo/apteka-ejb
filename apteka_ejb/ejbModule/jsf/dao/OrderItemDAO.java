@@ -7,6 +7,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
 
+import jsf.entities.Order;
 import jsf.entities.OrderItem;
 
 @Stateless
@@ -56,6 +57,14 @@ public class OrderItemDAO {
         } catch (Exception e) {
             e.printStackTrace();
         }
+    	
+    	return list;
+    }
+    
+    public List<OrderItem> getOrderItems(Order order){
+    	List<OrderItem> list = null;
+    	
+    	list = this.getOrderItemsByID(order.getIdOrder());
     	
     	return list;
     }
