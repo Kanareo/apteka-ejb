@@ -44,7 +44,6 @@ public class OrderDAO {
         }
     	Order order = list.get(0);
     	lastID = order.getIdOrder();
-    	//System.out.println(lastID);
     	return lastID;
     }
     

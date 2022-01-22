@@ -90,19 +90,5 @@ public class BrandDAO {
 
 	private void setFilterParam(Map<String, Object> filterParams) {
 	}
-
-	private String createWhere(String paramName, String param, String currentWhere) {
-		String where = currentWhere;
-
-		if (param != null) {
-			if (where.isEmpty()) {
-				where = "where ";
-			} else {
-				where += "and ";
-			}
-		}
-
-		return where;
-	}
     
 }
